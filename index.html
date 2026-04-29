@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Capítulo Justiça de Cambé Nº 940 – Ordem DeMolay</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --green:#155a2f;
+  --green2:#1d7a3f;
+  --green-bg:#eef5f0;
+  --gold:#b8923a;
+  --white:#ffffff;
+  --off:#f6f5f0;
+  --dark:#111810;
+  --gray:#5a6b5e;
+  --lgray:#9aaa9e;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Georgia',serif;background:var(--white);color:var(--dark);overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:200;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(21,90,47,0.12);display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:62px;}
+.nav-brand{display:flex;align-items:center;gap:12px;}
+.nav-logo-img{width:36px;height:36px;object-fit:contain;}
+.nav-brand-text{font-size:0.68rem;letter-spacing:0.15em;color:var(--green);text-transform:uppercase;line-height:1.5;font-family:sans-serif;}
+.nav-links{display:flex;gap:2.5rem;}
+.nav-links a{color:var(--gray);text-decoration:none;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;font-family:sans-serif;transition:color .2s;}
+.nav-links a:hover{color:var(--green);}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--white);padding:80px 2rem 5rem;position:relative;overflow:hidden;}
+.hero-watermark{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.035;pointer-events:none;}
+.hero-watermark svg{width:min(600px,90vw);}
+.hero-eyebrow{font-size:0.62rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--green);font-family:sans-serif;margin-bottom:1.8rem;display:flex;align-items:center;gap:14px;}
+.hero-eyebrow::before,.hero-eyebrow::after{content:'';width:32px;height:1px;background:var(--green);opacity:0.4;}
+.hero-logo{width:min(180px,40vw);margin-bottom:2.2rem;object-fit:contain;}
+.hero-title{font-size:clamp(2rem,5.5vw,3.8rem);font-weight:400;color:var(--dark);line-height:1.15;letter-spacing:0.01em;max-width:800px;}
+.hero-title em{color:var(--green);font-style:normal;}
+.hero-divider{display:flex;align-items:center;gap:14px;margin:2rem auto;}
+.hero-divider::before,.hero-divider::after{content:'';width:50px;height:1px;background:var(--gold);opacity:0.6;}
+.hero-divider-shape{width:7px;height:7px;background:var(--gold);transform:rotate(45deg);}
+.hero-sub{font-size:1rem;color:var(--gray);line-height:1.8;max-width:500px;}
+
+/* SCALE SECTION */
+.sec-scale{background:var(--off);padding:5rem 2rem;display:flex;justify-content:center;}
+.scale-wrap{display:flex;align-items:center;gap:6rem;max-width:900px;width:100%;}
+.scale-svg-area{flex:0 0 auto;}
+.scale-text{flex:1;}
+
+/* SECTIONS */
+section{padding:6rem 2rem;}
+.container{max-width:960px;margin:0 auto;}
+.s-eyebrow{font-size:0.62rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--green);font-family:sans-serif;margin-bottom:1rem;display:flex;align-items:center;gap:10px;}
+.s-eyebrow::before{content:'';width:20px;height:1px;background:var(--green);}
+.s-title{font-size:clamp(1.5rem,3.5vw,2.5rem);font-weight:400;color:var(--dark);line-height:1.25;margin-bottom:1.2rem;}
+.s-title em{color:var(--green);font-style:normal;}
+.s-rule{width:36px;height:2px;background:var(--gold);margin-bottom:1.5rem;opacity:0.7;}
+.s-body{color:var(--gray);font-size:0.93rem;line-height:1.9;}
+
+/* HISTÓRIA */
+.sec-historia{background:var(--white);}
+.historia-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;margin-top:4rem;align-items:start;}
+.historia-text p{color:var(--gray);font-size:0.92rem;line-height:1.9;margin-bottom:1.1rem;}
+/* timeline */
+.tl{padding-left:1.8rem;position:relative;}
+.tl::before{content:'';position:absolute;left:0;top:8px;bottom:0;width:1px;background:linear-gradient(to bottom,var(--green),rgba(21,90,47,0.05));}
+.tl-item{margin-bottom:2rem;position:relative;}
+.tl-item::before{content:'';position:absolute;left:-2.05rem;top:5px;width:8px;height:8px;border-radius:50%;background:var(--green);}
+.tl-year{font-size:0.62rem;letter-spacing:0.25em;color:var(--gold);font-family:sans-serif;margin-bottom:0.3rem;font-weight:600;}
+.tl-item h4{color:var(--dark);font-size:0.88rem;font-weight:400;margin-bottom:0.35rem;}
+.tl-item p{color:var(--gray);font-size:0.82rem;line-height:1.75;}
+
+/* PILARES */
+.sec-pilares{background:var(--off);}
+.pilares-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem;}
+.pilar{background:var(--white);border:1px solid rgba(21,90,47,0.1);border-top:3px solid var(--green);padding:2rem 1.6rem;}
+.pilar-num{font-size:0.6rem;letter-spacing:0.2em;color:var(--lgray);font-family:sans-serif;margin-bottom:0.8rem;}
+.pilar h3{font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--green);margin-bottom:0.8rem;font-family:sans-serif;}
+.pilar p{color:var(--gray);font-size:0.83rem;line-height:1.8;}
+
+/* FOTOS */
+.sec-fotos{background:var(--white);}
+.foto-duo{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3.5rem;}
+.foto-card{position:relative;overflow:hidden;border:1px solid rgba(21,90,47,0.1);}
+.foto-card img{width:100%;height:320px;object-fit:cover;display:block;transition:transform .5s;}
+.foto-card:hover img{transform:scale(1.04);}
+.foto-card-label{position:absolute;bottom:0;left:0;right:0;padding:1.2rem 1.5rem;background:linear-gradient(to top,rgba(17,24,16,0.85),transparent);}
+.foto-card-label h4{color:#fff;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;font-family:sans-serif;font-weight:400;}
+.foto-card-label p{color:rgba(255,255,255,0.7);font-size:0.72rem;margin-top:2px;font-family:sans-serif;}
+
+/* COMO AJUDA */
+.sec-social{background:var(--off);}
+.social-layout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;margin-top:4rem;align-items:start;}
+.stl{padding-left:1.8rem;position:relative;}
+.stl::before{content:'';position:absolute;left:0;top:8px;bottom:0;width:1px;background:linear-gradient(to bottom,var(--gold),rgba(184,146,58,0.05));}
+.stl-item{margin-bottom:2.2rem;position:relative;}
+.stl-item::before{content:'';position:absolute;left:-2.1rem;top:4px;width:9px;height:9px;border-radius:50%;background:var(--white);border:2px solid var(--gold);}
+.stl-item h4{color:var(--dark);font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;font-family:sans-serif;margin-bottom:0.45rem;}
+.stl-item p{color:var(--gray);font-size:0.86rem;line-height:1.8;}
+.quote-box{border-left:3px solid var(--green);padding:1.5rem 1.8rem;background:var(--white);margin-top:1rem;}
+.quote-box p{font-size:0.88rem;color:var(--dark);line-height:1.8;font-style:italic;}
+.quote-box cite{display:block;margin-top:0.8rem;font-size:0.62rem;letter-spacing:0.2em;color:var(--green);text-transform:uppercase;font-family:sans-serif;font-style:normal;}
+
+/* CTA */
+.sec-cta{background:var(--green);padding:7rem 2rem;text-align:center;}
+.sec-cta .s-eyebrow::before{background:#fff;opacity:0.4;}
+.sec-cta .s-eyebrow{color:rgba(255,255,255,0.7);}
+.cta-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:400;color:#fff;margin-bottom:1.2rem;line-height:1.3;}
+.cta-sub{color:rgba(255,255,255,0.7);font-size:0.92rem;line-height:1.85;max-width:500px;margin:0 auto 3rem;}
+.btn-wpp{display:inline-flex;align-items:center;gap:12px;background:#fff;color:var(--green);text-decoration:none;padding:1.1rem 3rem;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;font-family:sans-serif;font-weight:700;transition:all .25s;border:2px solid #fff;}
+.btn-wpp:hover{background:transparent;color:#fff;}
+.btn-wpp svg{width:18px;height:18px;flex-shrink:0;}
+.cta-note{margin-top:1.5rem;font-size:0.65rem;color:rgba(255,255,255,0.4);letter-spacing:0.15em;text-transform:uppercase;font-family:sans-serif;}
+
+/* FOOTER */
+footer{background:var(--dark);padding:3rem 2rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:1rem;}
+footer p{font-size:0.65rem;letter-spacing:0.18em;color:rgba(255,255,255,0.35);text-transform:uppercase;font-family:sans-serif;}
+.footer-logo{width:44px;opacity:0.5;object-fit:contain;}
+.footer-rule{width:40px;height:1px;background:rgba(255,255,255,0.15);}
+
+@media(max-width:700px){
+  .historia-grid,.scale-wrap,.pilares-grid,.foto-duo,.social-layout{grid-template-columns:1fr;gap:2.5rem;}
+  .nav-links{display:none;}
+  nav{padding:0 1.5rem;}
+  .scale-svg-area{display:flex;justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <img class="nav-logo-img" src="https://i.imgur.com/ZJmMhP8.jpg" onerror="this.style.display='none'" alt="Logo Capítulo Justiça de Cambé"/>
+    <div class="nav-brand-text">Capítulo Justiça de Cambé · Nº 940</div>
+  </div>
+  <div class="nav-links">
+    <a href="#historia">História</a>
+    <a href="#pilares">Valores</a>
+    <a href="#fotos">Nosso Capítulo</a>
+    <a href="#social">Como ajudamos</a>
+    <a href="#contato">Participe</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <!-- watermark balança gigante no fundo -->
+  <div class="hero-watermark" aria-hidden="true">
+    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" fill="none">
+      <!-- coluna -->
+      <rect x="246" y="80" width="8" height="360" fill="#155a2f"/>
+      <!-- base -->
+      <rect x="190" y="432" width="120" height="10" rx="5" fill="#155a2f"/>
+      <rect x="215" y="440" width="70" height="8" rx="4" fill="#155a2f"/>
+      <!-- barra -->
+      <rect x="80" y="78" width="340" height="8" rx="4" fill="#155a2f"/>
+      <!-- pivô -->
+      <circle cx="250" cy="82" r="14" fill="#155a2f"/>
+      <!-- cordas E -->
+      <line x1="115" y1="86" x2="85" y2="220" stroke="#155a2f" stroke-width="3"/>
+      <line x1="115" y1="86" x2="155" y2="220" stroke="#155a2f" stroke-width="3"/>
+      <!-- prato E -->
+      <path d="M68 220 Q120 240 172 220" stroke="#155a2f" stroke-width="4" fill="none"/>
+      <ellipse cx="120" cy="220" rx="52" ry="13" fill="#155a2f"/>
+      <!-- cordas D -->
+      <line x1="385" y1="86" x2="355" y2="220" stroke="#155a2f" stroke-width="3"/>
+      <line x1="385" y1="86" x2="415" y2="220" stroke="#155a2f" stroke-width="3"/>
+      <!-- prato D -->
+      <path d="M328 220 Q380 240 432 220" stroke="#155a2f" stroke-width="4" fill="none"/>
+      <ellipse cx="380" cy="220" rx="52" ry="13" fill="#155a2f"/>
+    </svg>
+  </div>
+
+  <div class="hero-eyebrow">Ordem DeMolay · Brasil · SCODRFB</div>
+
+  <img class="hero-logo" src="https://i.imgur.com/ZJmMhP8.jpg"
+    onerror="this.style.display='none'"
+    alt="Logo Capítulo Justiça de Cambé Nº 940"/>
+
+  <h1 class="hero-title">
+    Capítulo <em>Justiça</em> de Cambé<br>Nº 940 · Ordem DeMolay
+  </h1>
+
+  <div class="hero-divider"><div class="hero-divider-shape"></div></div>
+
+  <p class="hero-sub">Formando jovens de caráter, liderança e responsabilidade social em Cambé, Paraná, desde 2012.</p>
+</section>
+
+<!-- BALANÇA + INTRO -->
+<div class="sec-scale">
+  <div class="scale-wrap">
+    <!-- Balança da Justiça detalhada -->
+    <div class="scale-svg-area">
+      <svg width="220" height="300" viewBox="0 0 220 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- BASE -->
+        <rect x="65" y="278" width="90" height="10" rx="5" fill="#155a2f"/>
+        <rect x="80" y="268" width="60" height="12" rx="3" fill="#155a2f"/>
+        <!-- COLUNA -->
+        <rect x="107" y="58" width="6" height="212" fill="#155a2f"/>
+        <!-- TOPO DA COLUNA - ornamento -->
+        <polygon points="110,42 116,58 104,58" fill="#b8923a"/>
+        <rect x="106" y="42" width="8" height="4" rx="1" fill="#b8923a"/>
+        <!-- VIGA HORIZONTAL -->
+        <rect x="22" y="56" width="176" height="5" rx="2.5" fill="#155a2f"/>
+        <!-- PIVÔ central -->
+        <circle cx="110" cy="58" r="7" fill="#b8923a"/>
+        <circle cx="110" cy="58" r="3.5" fill="#155a2f"/>
+
+        <!-- === PRATO ESQUERDO === -->
+        <!-- Três correntes/cadeias esquerdas -->
+        <line x1="42" y1="61" x2="28" y2="155" stroke="#b8923a" stroke-width="1.2"/>
+        <line x1="42" y1="61" x2="52" y2="155" stroke="#b8923a" stroke-width="1.2"/>
+        <line x1="42" y1="61" x2="40" y2="155" stroke="#b8923a" stroke-width="0.5" stroke-dasharray="2,4"/>
+        <!-- Aro de suspensão E -->
+        <circle cx="42" cy="63" r="4" stroke="#b8923a" stroke-width="1.2" fill="none"/>
+        <!-- Prato E - curvado elegante -->
+        <path d="M14 155 C14 148 28 142 40 141 C52 142 66 148 66 155 C66 162 52 166 40 165 C28 166 14 162 14 155Z" fill="#eef5f0" stroke="#155a2f" stroke-width="1.5"/>
+        <!-- borda dourada prato E -->
+        <ellipse cx="40" cy="155" rx="26" ry="7" fill="none" stroke="#b8923a" stroke-width="1"/>
+        <!-- sombra/profundidade prato E -->
+        <ellipse cx="40" cy="160" rx="18" ry="3" fill="rgba(21,90,47,0.08)"/>
+
+        <!-- === PRATO DIREITO === -->
+        <line x1="178" y1="61" x2="164" y2="155" stroke="#b8923a" stroke-width="1.2"/>
+        <line x1="178" y1="61" x2="192" y2="155" stroke="#b8923a" stroke-width="1.2"/>
+        <line x1="178" y1="61" x2="178" y2="155" stroke="#b8923a" stroke-width="0.5" stroke-dasharray="2,4"/>
+        <!-- Aro D -->
+        <circle cx="178" cy="63" r="4" stroke="#b8923a" stroke-width="1.2" fill="none"/>
+        <!-- Prato D -->
+        <path d="M152 155 C152 148 166 142 178 141 C190 142 204 148 204 155 C204 162 190 166 178 165 C166 166 152 162 152 155Z" fill="#eef5f0" stroke="#155a2f" stroke-width="1.5"/>
+        <ellipse cx="178" cy="155" rx="26" ry="7" fill="none" stroke="#b8923a" stroke-width="1"/>
+        <ellipse cx="178" cy="160" rx="18" ry="3" fill="rgba(21,90,47,0.08)"/>
+
+        <!-- ESPADA (embaixo) -->
+        <!-- lâmina -->
+        <path d="M107 270 L113 270 L111 180 L109 180Z" fill="#b8923a" opacity="0.8"/>
+        <!-- guarda -->
+        <rect x="99" y="178" width="22" height="5" rx="2" fill="#155a2f"/>
+        <!-- cabo -->
+        <rect x="107" y="183" width="6" height="45" rx="2" fill="#155a2f"/>
+        <!-- pomo -->
+        <ellipse cx="110" cy="232" rx="7" ry="5" fill="#b8923a"/>
+
+        <!-- ORNAMENTOS NAS PONTAS DA VIGA -->
+        <circle cx="22" cy="58" r="4" fill="#b8923a"/>
+        <circle cx="198" cy="58" r="4" fill="#b8923a"/>
+      </svg>
+    </div>
+    <div class="scale-text">
+      <p class="s-eyebrow">Nossa identidade</p>
+      <h2 class="s-title">A <em>Justiça</em><br>como norte</h2>
+      <div class="s-rule"></div>
+      <p class="s-body">A balança da Justiça não é apenas o símbolo do nosso capítulo — é um compromisso diário. Cada DeMolay de Cambé carrega o dever de agir com equidade, ética e integridade em todas as esferas da vida.</p>
+      <p class="s-body" style="margin-top:1rem;">O Capítulo Justiça de Cambé Nº 940 foi <strong>fundado em 23 de julho de 2012</strong> e instalado em <strong>31 de agosto de 2013</strong>, formando jovens que fazem a diferença em Cambé e no Paraná.</p>
+    </div>
+  </div>
+</div>
+
+<!-- HISTÓRIA -->
+<section class="sec-historia" id="historia">
+  <div class="container">
+    <div class="historia-grid">
+      <div>
+        <p class="s-eyebrow">Nossa origem</p>
+        <h2 class="s-title">A história da <em>Ordem DeMolay</em></h2>
+        <div class="s-rule"></div>
+        <div class="historia-text">
+          <p>A Ordem DeMolay foi fundada em <strong>9 de março de 1919</strong>, em Kansas City, Missouri (EUA), por Frank Sherman Land — "Dad Land" — junto a jovens liderados por Louis Gordon Lower.</p>
+          <p>O nome é uma homenagem a <strong>Jacques de Molay</strong>, último Grão-Mestre dos Cavaleiros Templários, executado em 1314. Sua coragem diante da morte tornou-se símbolo dos valores que a Ordem cultiva em cada jovem.</p>
+          <p>Presente em mais de 20 países, a DeMolay é reconhecida como uma das maiores organizações juvenis de formação de caráter do mundo. No Brasil, conta com mais de 110.000 membros ativos em todos os estados.</p>
+        </div>
+      </div>
+      <div>
+        <p class="s-eyebrow">Linha do tempo</p>
+        <div class="tl" style="margin-top:1.5rem;">
+          <div class="tl-item">
+            <div class="tl-year">1919</div>
+            <h4>Fundação mundial</h4>
+            <p>Frank S. Land funda a Ordem DeMolay em Kansas City com nove jovens.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">1923</div>
+            <h4>Expansão internacional</h4>
+            <p>Chega ao Canadá e ultrapassa 10.000 membros no continente americano.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">1980</div>
+            <h4>Chegada ao Brasil</h4>
+            <p>A DeMolay chega ao Brasil com o apoio da Maçonaria, espalhando-se por todos os estados.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2012</div>
+            <h4>Nosso capítulo nasce</h4>
+            <p>Fundado em julho de 2012 e instalado em agosto de 2013 em Cambé – PR.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">Hoje</div>
+            <h4>Brasil: 2º no mundo</h4>
+            <p>Segundo maior país em número de DeMolays, com mais de 110.000 membros ativos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PILARES -->
+<section class="sec-pilares" id="pilares">
+  <div class="container">
+    <p class="s-eyebrow">Nossos valores</p>
+    <h2 class="s-title">O que um <em>DeMolay</em> pratica</h2>
+    <div class="pilares-grid">
+      <div class="pilar"><div class="pilar-num">01</div><h3>Liderança</h3><p>Cada membro ocupa cargos de responsabilidade, aprendendo a liderar equipes, tomar decisões e representar seus pares com dignidade.</p></div>
+      <div class="pilar"><div class="pilar-num">02</div><h3>Justiça</h3><p>Nossa patrona. Agir com equidade, ética e integridade em todas as esferas da vida — pessoal, coletiva e cívica — é o centro da nossa identidade.</p></div>
+      <div class="pilar"><div class="pilar-num">03</div><h3>Fraternidade</h3><p>A irmandade entre membros constrói laços de amizade e cooperação que duram a vida toda, independente de origem ou condição social.</p></div>
+      <div class="pilar"><div class="pilar-num">04</div><h3>Serviço</h3><p>Projetos sociais e ações comunitárias são parte do DNA DeMolay. Servir ao próximo é uma virtude praticada, não apenas ensinada.</p></div>
+      <div class="pilar"><div class="pilar-num">05</div><h3>Caráter</h3><p>Amor filial, reverência, cortesia, companheirismo, fidelidade, limpeza e patriotismo: as sete virtudes que formam a base moral de cada integrante.</p></div>
+      <div class="pilar"><div class="pilar-num">06</div><h3>Tradição</h3><p>Rituais e cerimônias cultivam o respeito pela história e criam memórias que conectam gerações de DeMolays num único propósito.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOTOS -->
+<section class="sec-fotos" id="fotos">
+  <div class="container">
+    <p class="s-eyebrow">Nosso capítulo em imagens</p>
+    <h2 class="s-title">Jovens reais, <em>impacto real</em></h2>
+    <div class="s-rule"></div>
+    <p class="s-body" style="max-width:580px;">Conheça o rosto do Capítulo Justiça de Cambé — nas cerimônias de iniciação que marcam a entrada de novos irmãos, e nas ações solidárias que transformam nossa cidade.</p>
+
+    <div class="foto-duo">
+      <!-- INICIAÇÃO -->
+      <div class="foto-card">
+        <img src="https://i.imgur.com/Rd4jKJO.jpg"
+          onerror="this.src='https://i.imgur.com/Rd4jKJO.jpeg'"
+          alt="Iniciação – Capítulo Justiça de Cambé Nº 940"
+          style="width:100%;height:320px;object-fit:cover;display:block;"/>
+        <div class="foto-card-label">
+          <h4>Iniciação</h4>
+          <p>Entrada de novos irmãos na Ordem DeMolay</p>
+        </div>
+      </div>
+      <!-- AÇÃO SOCIAL -->
+      <div class="foto-card">
+        <img src="https://i.imgur.com/99P6Jzb.jpg"
+          onerror="this.src='https://i.imgur.com/99P6Jzb.jpeg'"
+          alt="Ação Social – Arrastão Solidário"
+          style="width:100%;height:320px;object-fit:cover;display:block;"/>
+        <div class="foto-card-label">
+          <h4>Ação Social</h4>
+          <p>Arrastão Solidário – doação à Santa Casa de Cambé</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO AJUDA -->
+<section class="sec-social" id="social">
+  <div class="container">
+    <div class="social-layout">
+      <div>
+        <p class="s-eyebrow">Impacto concreto</p>
+        <h2 class="s-title">Como a Ordem<br><em>ajuda na prática</em></h2>
+        <div class="s-rule"></div>
+        <p class="s-body">Ser DeMolay não é apenas pertencer a uma organização. É assumir um compromisso ativo com sua comunidade e com o próprio desenvolvimento como pessoa.</p>
+        <div class="quote-box" style="margin-top:2rem;">
+          <p>"A Ordem DeMolay já formou presidentes, astronautas, artistas e líderes ao redor do mundo. Mas, acima de tudo, formou pessoas de bem em suas comunidades."</p>
+          <cite>— Tradição DeMolay</cite>
+        </div>
+      </div>
+      <div class="stl">
+        <div class="stl-item">
+          <h4>Arrastão Solidário</h4>
+          <p>Uma das ações mais marcantes do capítulo. Arrecadamos alimentos para a Santa Casa de Cambé e outras instituições, mobilizando a comunidade para uma causa maior.</p>
+        </div>
+        <div class="stl-item">
+          <h4>Desenvolvimento pessoal</h4>
+          <p>Oratória, gestão de conflitos, trabalho em equipe e autoconhecimento — habilidades valorizadas no mercado e na vida adulta, aprendidas na prática desde cedo.</p>
+        </div>
+        <div class="stl-item">
+          <h4>Rede de suporte</h4>
+          <p>Jovens que muitas vezes não encontravam pertencimento encontram na DeMolay um lar de valores e amizades genuínas para a vida toda.</p>
+        </div>
+        <div class="stl-item">
+          <h4>Formação de líderes</h4>
+          <p>Ex-DeMolays estão entre políticos, empresários, professores e militares. A Ordem forma cidadãos íntegros que se destacam onde estão.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec-cta" id="contato">
+  <div style="max-width:580px;margin:0 auto;text-align:center;">
+    <p class="s-eyebrow" style="justify-content:center;">Faça parte</p>
+    <h2 class="cta-title">Quer conhecer ou<br>ingressar no capítulo?</h2>
+    <p class="cta-sub">Fale diretamente conosco pelo WhatsApp. Seja um jovem interessado, um pai curioso ou alguém que quer apoiar a Ordem DeMolay em Cambé — estamos prontos para conversar.</p>
+    <a class="btn-wpp" href="https://wa.me/5543996619847?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Cap%C3%ADtulo%20Justi%C3%A7a%20de%20Camb%C3%A9%20N%C2%BA%20940." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Falar pelo WhatsApp
+    </a>
+    <p class="cta-note">Jovens entre 12 e 21 anos podem se candidatar à membresia</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img class="footer-logo" src="https://i.imgur.com/ZJmMhP8.jpg" onerror="this.style.display='none'" alt="Logo"/>
+  <div class="footer-rule"></div>
+  <p>Capítulo Justiça de Cambé Nº 940 · Ordem DeMolay · SCODRFB</p>
+  <p>Cambé · Paraná · Brasil &nbsp;·&nbsp; Fundado em 23/07/2012 · Instalado em 31/08/2013</p>
+  <p><em style="font-style:italic;">Omnia vincit veritas</em> — A verdade vence tudo</p>
+</footer>
+
+</body>
+</html>
+
+
+
